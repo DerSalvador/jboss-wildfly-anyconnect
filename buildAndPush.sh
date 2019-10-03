@@ -1,5 +1,6 @@
 #!/bin/bash
-docker build . -t docker.io/brokerme/jboss:wildfly-anyconnect
+IMG=docker.io/brokerme/jboss:wildfly-anyconnect-1
+docker build . -t $IMG
 loginToDockerRegistryBrokerme.sh 
-docker push  docker.io/brokerme/jboss:wildfly-anyconnect
+docker push $IMG
 
